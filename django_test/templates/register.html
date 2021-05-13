@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+    <h1>Register Page</h1>
+    <font style="color: blue;">{{output}}</font>
+<form method="POST" action="/register/">
+    {% csrf_token %}
+    <table cellspacing=15>
+        <tr>
+            <td>Name</td>
+            <td><input type="text" name="name" /></td>
+        </tr>
+        <tr>
+            <td>Username</td>
+            <td><input type="email" name="username" /></td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td><input type="password" name="password" /></td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td><input type="radio" name="gender" value="male" />Male &nbsp;&nbsp; <input type="radio" name="gender" value="female" />Female</td>
+        </tr>
+        <tr>
+            <td>Mobile</td>
+            <td><input type="text" name="mobile" /></td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td><textarea name="address" cols="30" rows="10"></textarea></td>
+        </tr>
+        <tr>
+            <td>City</td>
+            <td>
+                <select name="city">
+                    <option>Indore</option>
+                    <option>Bhopal</option>
+                    <option>Ujjain</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="submit" value="Register!"></td>
+        </tr>
+    </table>
+</form>
+<a href="/">go back</a>
+</pre>
+</body>
+</html>

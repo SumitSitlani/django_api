@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <pre>
+      <h1 align="center">Users Registered</h1>
+    <table align="center" border="1px solid">
+      <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>USERNAME</th>
+        <th>PASSWORD</th>
+        <th>GENDER</th>
+        <th>MOBILE</th>
+        <th>ADDRESS</th>
+        <th>CITY</th>
+      </tr>
+      {% for x in userDeats %}
+      <tr>
+        <td>{{x.uid}}</td>
+        <td>{{x.name}}</td>
+        <td>{{x.username}}</td>
+        <td>{{x.password}}</td>
+        <td>{{x.gender}}</td>
+        <td>{{x.mobile}}</td>
+        <td>{{x.address}}</td>
+        <td>{{x.city}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+    <a href="/">go back</a>
+  </pre>
+  </body>
+</html>

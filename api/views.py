@@ -12,11 +12,11 @@ from django_test import models
 @api_view(['GET'])
 def apiOverview(request):
     api_urls={
-        'List':'/user-list/',
-        'Details View': '/user-list/<str:pk>/',
-        'Create': '/user-create/',
-        'Update': '/user-update/<str:pk>/',
-        'Delete': '/user-delete/<str:pk>/',
+        'List':'http://127.0.0.1:8000/api/user-list/',
+        'Details View': 'http://127.0.0.1:8000/api/user-list/<str:pk>/',
+        'Create': 'http://127.0.0.1:8000/api/user-create/',
+        'Update': 'http://127.0.0.1:8000/api/user-update/<str:pk>/',
+        'Delete': 'http://127.0.0.1:8000/api/user-delete/<str:pk>/',
     }
     return Response(api_urls)
 
